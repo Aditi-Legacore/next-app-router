@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { lusitana } from './ui/fonts';
 
-import heroDesktop from "../../public/file.svg";
-import heroMobile from "../../public/globe.svg";
+import heroDesktop from "../../public/Discover-the-Bright-Side-The-Surprising-Benefits-of-Online-Learning.png";
+import heroMobile from "../../public/92e27c18a8239c5ccc05fea812dd0dd7.jpg";
 import Customers from "./dashboard/customers/page";
 import Invoices from "./dashboard/invoices/page";
 
@@ -38,12 +38,17 @@ export default function HomePage() {
         </div>
       </section>
 
+       <h1 className="text-2xl font-bold md:text-blue-800 max-sm:bg-blue-300 ml-6">Welcome to Next.js</h1>
+      <p className={`${lusitana.className} text-lg text-gray-700 md:text-blue-800 ml-6`}>
+        This paragraph is styled with the Lusitana font.
+      </p>
+
        <Image
         src={heroDesktop}
         alt="Hero Desktop"
-        // width={300}
-        // height={150}
-        priority
+        width={500}
+        height={500}
+        // priority
         className="hidden md:block" // Hidden on mobile, shown on md+
       />
 
@@ -57,29 +62,24 @@ export default function HomePage() {
         className="block md:hidden" // Shown on mobile, hidden on md+
       />
 
-      <h1 className="text-2xl font-bold md:text-blue-800 max-sm:bg-blue-300">Welcome to Next.js</h1>
-      <p className={`${lusitana.className} text-lg text-gray-700 md:text-blue-800`}>
-        This paragraph is styled with the Lusitana font.
-      </p>
-
-       <div className="p-6">
+       {/* <div className="p-6">
       <Image
         src={heroMobile}
         alt="Picture of the author"
         width={500}
         height={500}
-        quality={90}
-        priority
+        // quality={90}
+        // priority
         // placeholder="blur"
         // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."
         style={{ objectFit: "cover", borderRadius: "50%" }}
         // onLoad={() => console.log("Image loaded!")}
         // onError={() => console.log("Image failed to load!")}
       />
-    </div>
+    </div> */}
 
-    <Invoices />
-    <Customers />
+    {/* <Invoices />
+    <Customers /> */}
     </main>
   );
 }

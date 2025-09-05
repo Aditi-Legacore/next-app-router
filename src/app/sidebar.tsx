@@ -18,7 +18,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="fixed left-0 top-0 h-full flex flex-col w-64">
       {/* Logo */}
       <div className="flex items-center gap-2 px-6 py-4 bg-blue-600 text-white font-semibold text-lg">
         <Globe className="w-5 h-5" />
